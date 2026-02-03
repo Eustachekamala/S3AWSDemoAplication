@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: S3DemoApplication
+
+cloud:
+  aws:
+    credentials:
+      access-key: AKIAX4IMZMBLNPCE7WBX
+      secret-key: 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
+    region:
+      static: us-east-1
+
+aws:
+  s3:
+    bucket-name: amzn-eustax-bucket
