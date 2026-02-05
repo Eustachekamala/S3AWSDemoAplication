@@ -1,0 +1,11 @@
+cloud:
+  aws:
+    credentials:
+      access-key: your-access-key
+      secret-key: your-secret-key
+    region:
+      static: your-region
+
+aws:
+  s3:
+    bucket-name: amzn-eustax-bucket
