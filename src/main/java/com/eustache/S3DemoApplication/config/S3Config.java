@@ -13,20 +13,15 @@ import software.amazon.awssdk.services.s3.S3Client;
 
 @Configuration
 public class S3Config {
-
-    @Value("${cloud.aws.credentials.access-key}")
-    private String accessKey;
-
-    @Value("${cloud.aws.credentials.secret-key}")
-    private String secretKey;
-
     @Value("${cloud.aws.region.static}")
     private String region;
 
-
     @Bean("s3Client")
     @Profile("local")
-    public S3Client s3Client(){
+    public S3Client s3Client(
+        @Value("${cloud.aws.credentials.access-key}") String accessKey,
+        @Value("${cloud.aws.credentials.secret-key}") String secretKey
+    ){
         AwsBasicCredentials awsBasicCredentials = AwsBasicCredentials.create(accessKey, secretKey);
         return S3Client.builder()
             .region(Region.of(region))

@@ -5,4 +5,4 @@ cloud:
 
 aws:
   s3:
-    bucket-name: amzn-eustax-bucket
+    bucket-name: your-bucket-name
