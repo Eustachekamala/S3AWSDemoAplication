@@ -1,11 +1,11 @@
 cloud:
   aws:
     credentials:
-      access-key: your-access-key
-      secret-key: your-secret-key
+      access-key: ${access-key}
+      secret-key: ${secret-key}
     region:
-      static: your-region
+      static: ${region}
 
 aws:
   s3:
-    bucket-name: your-bucket-name
+    bucket-name: ${bucket-name}

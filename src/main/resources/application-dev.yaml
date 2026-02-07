@@ -1,8 +1,8 @@
 cloud:
   aws:
     region:
-      static: your-region
+      static: ${region}
 
 aws:
   s3:
-    bucket-name: your-bucket-name
+    bucket-name: ${bucket-name}
